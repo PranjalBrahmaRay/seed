@@ -7,22 +7,23 @@ $id=$_GET['id'];
  $readscheme = $crud->Read("schemes","`id`='$id'");
 }
 ?>
-    <body class="demo-5">
-        <?php include("include/navbar.php"); ?>
-			
-			<!-- SAB BANNER START-->
-			<div class="sab_banner overlay">
-				<div class="container">
-					<div class="sab_banner_text">
-						<h2>Scheme Detail</h2>
-						<ul class="breadcrumb">
-						  <li class="breadcrumb-item"><a href="#">Home</a></li>
-						  <li class="breadcrumb-item active">Scheme</li>
-						  <li class="breadcrumb-item"><a href="#">Scheme detail</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+     <body class="demo-5">
+        <!--WRAPPER START--> 
+        <div class="wrapper"> 
+            <?php include("include/navbar.php"); ?>
+              
+            <!-- SAB BANNER START-->
+            <div class="sab_banner overlay">
+                <div class="container">
+                    <div class="sab_banner_text">
+                        <h2>Scheme Details</h2>
+                        <ul class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active">Photo Scheme Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 			<!-- SAB BANNER END-->
 			<?php 
                             if($readscheme){
@@ -36,52 +37,26 @@ $id=$_GET['id'];
 			<!-- CITY SERVICES2 WRAP START-->
 			<div class="city_health_department">
 				<div class="container">
-					<div class="city_health2_fig">
-						<figure class="box">
-							<div class="box-layer layer-1"></div>
-							<div class="box-layer layer-2"></div>
-							<div class="box-layer layer-3"></div>
-							<img src="seed-admin/admin/<?php echo $image;?>" style="width: 1169px; height: 431px;" alt="1169 x 431">
-						</figure>	
-					</div>
+					
 					<div class="row">
-						<div class="col-md-3">
-							<div class="sidebar_widget">
-								<!-- SIDE SUBMIT FORM START-->
-								<div class="side_submit_form">
-										<h4 class="sidebar_title">DOWNLOADS</h4>
-									
-								</div>
-								<!-- SIDE SUBMIT FORM END-->
-								
-								
-
-								<!-- SIDE CONTACT INFO START-->
-								<div class="side_notice_list">
-								
-									<ul class="side_notice_row">
-										<li>
-											<div class="side_notice_detail">
-												<a href="#"><i class="fa icon-pdf"></i></a>
-												<div class="side_notice_text">
-													<h6><a href="#">Download PDF</a></h6>
-													<span>SIze 3 MB</span>
-												</div>
-											</div>
-										</li>
-										
-									</ul>
-								</div>
+						<div class="col-md-5">
+							<div class="city_health2_fig">
+								<figure class="box">
+									<div class="box-layer layer-1"></div>
+									<div class="box-layer layer-2"></div>
+									<div class="box-layer layer-3"></div>
+									<img src="seed-admin/admin/<?php echo $image;?>" style="width: 650px; height: 350px;" alt="1169 x 431">
+								</figure>	
 							</div>
 						</div>
-						<div class="col-md-9">
+						<div class="col-md-7">
 							<div class="city_health2_row">
 								<!--CITY HEALTH TEXT START-->
 								<div class="city_health2_text">
 									<!--SECTION HEADING START-->
 									<div class="section_heading border">
 										
-										<h2><?php echo $head;?></h2>
+										<h2 align="justify"><?php echo $head;?></h2>
 									</div>
 									<!--SECTION HEADING END-->
 									<p align="justify"><?php echo $description;?></p>

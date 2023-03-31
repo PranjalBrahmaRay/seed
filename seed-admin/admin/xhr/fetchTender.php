@@ -8,7 +8,7 @@ extract($_POST);
 $readEnquiry = $crud->Read("tenders","`id`='$dataId'");
 
 if ($readEnquiry) {
-    // $data['pdf']= $readEnquiry[0]['pdf'];
+    $data['image']= $readEnquiry[0]['image'];
 	$data['tenderno']= $readEnquiry[0]['tenderno'];
 	$data['title']= $readEnquiry[0]['title'];
 	$data['date_uploaded']= $readEnquiry[0]['date_uploaded'];

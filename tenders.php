@@ -62,8 +62,8 @@
                                             <td><?php echo $tenders['tenderno'] ;?></td> 
                                             <td><?php echo $tenders['title'] ;?> </td>
                                             <td><?php echo $tenders['date_uploaded'] ;?> 
-                                            <td><a href="seed-admin/admin/images/pdf/sample.pdf"><i class="fa fa-file-pdf-o" style="color:red"> view</i></a></td>
-                                            <td><a href="seed-admin/admin/images/pdf/sample.pdf" download><i class="fa fa-download"> pdf</i></a></td>
+                                            <td><a href="seed-admin/admin/<?php echo $tenders['image'] ;?>"><i class="fa fa-file-pdf-o" style="color:red"> view</i></a></td>
+                                            <td><a href="seed-admin/admin/<?php echo $tenders['image'] ;?>" download><i class="fa fa-download"> pdf</i></a></td>
                                         </tr>
                                        
                                         <?php }}?>                             

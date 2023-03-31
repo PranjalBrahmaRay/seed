@@ -62,11 +62,11 @@ $row=mysqli_num_rows($rs_result);
 							
 							<div class="city_business_fig">
 								<figure class="overlay">
-									<img src="seed-admin/admin/<?php echo $schemes['image'] ;?>" alt="">
+									<img src="seed-admin/admin/<?php echo $schemes['image'] ;?>" style="width: 300px;height: 200px" alt="">
 									<div class="city_service2_list">
 										
 										<div class="city_service2_caption">
-											<h5><?php echo $schemes['title'] ;?></h5>
+											<h5 class="show-read-more"><?php echo $schemes['title'] ;?></h5>
 										</div>
 									</div>
 								</figure>
@@ -163,6 +163,23 @@ for (var i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
+</script>
+<script>
+$(document).ready(function(){
+    var maxLength = 20;
+    $(".show-read-more").each(function(){
+        var myStr = $(this).text();
+        if($.trim(myStr).length > maxLength){
+            var newStr = myStr.substring(0, maxLength);
+            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more">...</a>');
+            $(this).append('<span class="more-text">' + removedStr + '</span>');
+        }
+
+    });
+    
+});
 </script>
     </body>
 

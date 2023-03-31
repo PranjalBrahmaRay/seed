@@ -11,14 +11,12 @@ $read = $crud->Read("newsticker","1");
       <link href="../jqerynewsticker/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
       <link href="../jqerynewsticker/css/site.css?v3" rel="stylesheet" type="text/css" />
       <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+      <link href="css/newstyle.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="../jqerynewsticker/scripts/jquery.bootstrap.newsbox.js?v3" type="text/javascript"></script>
+
    </head>
-   <style type="text/css">
-        .news{font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-   </style>
+  
    <body>
       <script type="text/javascript"
          src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
@@ -40,13 +38,18 @@ $read = $crud->Read("newsticker","1");
                                     <?php 
                                      if ($read) {
                                      $n=0;
+                                     $date=$read[0]['date_uploaded'];
+                                        $newDate = date("d/m/Y", strtotime($date));
+                                        // echo $newDate;
                                      foreach ($read as $news)
                                       {
+
                                      ?>
                                     <tr>
                                        
-                                       <td><img src="../seed-admin/admin/<?php echo $news['image'] ;?>" class="news" height="50vh" width="60" class="img-circle" /></td>
-                                       <td><?php echo $news['news'] ;?> <a href="../report.php" target="_blank" style="color:red">click</a></td>
+                                       <!-- <td><img src="../seed-admin/admin/<?php echo $news['image'] ;?>" class="news" height="50vh" width="60" class="img-circle" /></td> -->
+
+                                       <td class="news"> <i class="fa fa-dot-circle" style="font-size:10px;color:green"></i> <?php echo $news['news'] ;?> <a href="../report.php" target="self" style="color:red;font-style: italic;">click here</a>  <span style="font-size: 13px; color: blue; font-weight: bold;font-family: 'Montserrat', sans-serif "> (<?php echo $newDate ;?>)</span> </td>
                                        
                                     </tr>
                                     <?php }}?>

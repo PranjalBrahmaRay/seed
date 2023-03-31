@@ -57,8 +57,8 @@
 													<li><a href="contact.php">Contact Us</a></li>
 												</ul>
 											</li>
-											<li><a href="#">ITIs</a>
-												<ul class="child">
+											<li><a href="comingSoon.php">ITIs</a>
+												<!-- <ul class="child">
 												            <li><a href="link/itikokrajhar/institution/index.php" target="_blank">Industrial Training Institute,Kokrajhar</a></li>
 															<li><a href="link/itibhergaon/institution/index.php" target="_blank">Industrial Training Institute,Bhergaon</a></li>
 															<li><a href="link/itimazbat/institution/index.php" target="_blank">Industrial Training Institute,Mazbat</a></li>
@@ -67,7 +67,7 @@
 															<li><a href="link/itibolumguri/institution/index.php" target="_blank">Industrial Training Institute,Bollomguri</a></li>
 															<li><a href="link/itiporbatjhora/institution/index.php" target="_blank">Industrial Training Institute,Porbatjhora</a></li>
 															<li><a href="link/itisuklai/institution/index.php" target="_blank">Industrial Training Institute,Suklai</a></li>
-												</ul>
+												</ul> -->
 											</li>
 											<li><a href="#">Schemes & Tenders</a>
 												<ul class="child">
@@ -79,7 +79,7 @@
 												
 											</li>
 											
-											<li><a href="link/emp/index.php" target="_blank">Employment Exchange</a></li>
+											<li><a href="comingSoon.php" >Employment Exchange</a></li>
 											<li><a href="usefullink.php">Useful Links</a></li>
 											<li><a href="#">Media</a>
 															<ul class="child">
@@ -114,8 +114,8 @@
 													<li><a href="contact.php">Contact Us</a></li>
 											</ul>
 										</li>
-										<li class="menu-item kode-parent-menu"><a href="#">ITIs</a>
-											<ul class="dl-submenu">
+										<li class="menu-item kode-parent-menu"><a href="comingSoon.php">ITIs</a>
+											<!-- <ul class="dl-submenu">
 													<li><a href="business.php">Industrial Training Institute,Kokrajhar</a></li>
 													<li><a href="business-detail.php">Industrial Training Institute,Bhergaon</a></li>
 													<li><a href="business-detail.php">Industrial Training Institute,Mazbat</a></li>
@@ -124,7 +124,7 @@
 													<li><a href="business-detail.php">Industrial Training Institute,Bollomguri</a></li>
 													<li><a href="business-detail.php">Industrial Training Institute,Porbatjhora</a></li>
 													<li><a href="business-detail.php">Industrial Training Institute,Suklai</a></li>
-										</ul>
+										</ul> -->
 										</li>
 										<li class="menu-item kode-parent-menu"><a href="#">Schemes & Tenders</a>
 											<ul class="dl-submenu">
@@ -134,7 +134,7 @@
 											</ul>
 										</li>
 										<li><a href="link/LogoCompet/index.php">Logo Competition</a></li>
-										<li><a href="employment.php">Employment Exchange</a></li>
+										<li><a href="comingSoon.php">Employment Exchange</a></li>
 										<li><a href="resident.html">Useful Links</a></li>
 										<li class="menu-item kode-parent-menu"><a href="#">Media</a>
 											<ul class="dl-submenu">
@@ -173,8 +173,8 @@
 									<li><a href="telephon-direct.php">Telephone Directory</a></li>
 								</ul>
 							</li>
-							<li><a href="#">ITIs</a>
-								<ul class="child">
+							<li><a href="comingSoon.php">ITIs</a>
+								<!-- <ul class="child">
 									<li><a href="business.php">Industrial Training Institute,Kokrajhar</a></li>
 												<li><a href="business-detail.php">Industrial Training Institute,Bhergaon</a></li>
 												<li><a href="business-detail.php">Industrial Training Institute,Mazbat</a></li>
@@ -183,7 +183,7 @@
 												<li><a href="business-detail.php">Industrial Training Institute,Bollomguri</a></li>
 												<li><a href="business-detail.php">Industrial Training Institute,Porbatjhora</a></li>
 												<li><a href="business-detail.php">Industrial Training Institute,Suklai</a></li>
-								</ul>
+								</ul> -->
 							</li>
 							<li><a href="business.html">Schemes & Tenders</a>
 								<ul class="child">

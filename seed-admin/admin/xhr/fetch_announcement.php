@@ -9,7 +9,7 @@ $readEnquiry = $crud->Read("announcements","`id`='$dataId'");
 
 if ($readEnquiry) {
 
-	
+	$data['image']= $readEnquiry[0]['image'];
 	$data['head']= $readEnquiry[0]['head'];
 	
 	$data['description']= $readEnquiry[0]['description'];

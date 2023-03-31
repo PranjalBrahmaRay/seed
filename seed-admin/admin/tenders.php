@@ -118,13 +118,15 @@
 									
 								</div>
 								<div class="card-body row">
-									<div class="col-lg-12 p-t-20" >
-										<label  class="control-label col-md-3">Upload Pdf
+									<div class="col-lg-12 p-t-20">
+										<label class="control-label col-md-3">Upload Pdf
 										</label>
 										<div class="col-md-12">
-											<div id="id_dropzone"><input type="file" name="aboutImage" accept="image/*,.pdf" class="dropzone"></div>
-											<!-- <div id="id_dropzone"><input type="file" name="pdf" accept=".pdf" class="dropzone"></div> -->
-										</div> 
+											<div>
+												<input type="file" name="pdf_file" id="pdf_file" accept=".pdf" class="dropzone">
+												 
+											</div>
+										</div>
 									</div>
 									<div class="col-lg-6 p-t-20">
 										<div

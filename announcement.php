@@ -81,7 +81,7 @@ $row=mysqli_num_rows($rs_result);
 										</ul>
 										<p class="show-read-more blogpara"><span><?php echo $announce['description'];?></p>
 									</div>
-									<a class="theam_btn btn2" href="assets/images/pdf/sample.pdf"><i class="fa fa-file-pdf-o" style="color:red"> </i> detail</a>
+									<a class="theam_btn btn2" href="seed-admin/admin/<?php echo $announce['image'];?>"download><i class="fa fa-file-pdf-o" style="color:red"> </i> detail</a>
 								</div>
 							</li>
 							

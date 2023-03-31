@@ -126,7 +126,7 @@ $row=mysqli_num_rows($rs_result);
 														</ul>
 														<div class="city_blog2_text">
 															<h5 class="show-read-more"><a href="#"><?php echo $bodoland['title'] ;?>"</a></h5>
-															<p class="show-read-more blogpara" ><a href="#"><?php echo $bodoland['description'] ;?>"</a></p>
+															<p align="justify" class="show-read-more blogpara" ><a href="#"><?php echo $bodoland['description'] ;?>"</a></p>
 															<a class="btn-hover2" href="bodoSeedDetails.php?id=<?php echo $bodoland['id'] ;?>" tabindex="0">Read More</a>
 														</div>
 													</div>
@@ -221,7 +221,7 @@ for (var i = 0; i < btns.length; i++) {
 </script>
 <script>
 $(document).ready(function(){
-    var maxLength = 40;
+    var maxLength = 35;
     $(".show-read-more").each(function(){
         var myStr = $(this).text();
         if($.trim(myStr).length > maxLength){

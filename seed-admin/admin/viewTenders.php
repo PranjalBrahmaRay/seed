@@ -118,26 +118,30 @@
 				                    <table id="example" class="table table-striped table-bordered">
 				                        <thead class="gradient">
 				                            <tr>
-				                                <th>ID</th>
-			                                 	<th>tender no.</th>
-                                        <th>title</th>
-                                        <th>date of posting</th>
-                                        <th>action</th>
-                                        <!-- <th>View Pdf</th>
-                                        <th>Download Pdf</th> -->
+			                                <th>ID</th>
+			                                
+		                                 	<th>tender no.</th>
+	                                        <th>title</th>
+	                                        <th>date of posting</th>
+	                                        <th>View Pdf</th>
+	                                        <th>action</th>
+                                        	
+                                        
 				                                
 				                            </tr>
 				                        </thead>
 						                    
 										<tfoot>
 											<tr>
-												                <th>ID</th>
-												                <th>tender no.</th>
+						                <th>ID</th>
+						               
+						                <th>tender no.</th>
                                         <th>title</th>
                                         <th>date of posting</th>
+                                        <th>View Pdf</th>
                                         <th>action</th>
-                                       <!--  <th>View Pdf</th>
-                                        <th>Download Pdf</th> -->
+                                        
+                                        <!-- <th>Download Pdf</th> -->
 											</tr>
 										</tfoot>
 										 <tbody>
@@ -153,6 +157,7 @@
 	                                        	<td><?php echo $tenders['title'] ;?></td>	
 	                                        		
 	                                        	<td><?php echo $tenders['date_uploaded'];?></td>	
+	                                        	<td><a href="<?php echo $tenders['image'] ;?>"><i class="fa fa-file-pdf-o" style="color:red;font-size: 10px"> view</i></a></td>	
 	                                        	<!-- <td><a class="tblDelBtn" tabindex="0" aria-controls="example" type="button" a href="#" data-id="<?php echo $tenders['id'];?>"  data-target="#model4" data-toggle="modal" class="tblEditBtn"><span><i class="fa fa-pencil"></i> | <i class="fa fa-trash-o"></i></span></a>
 												</td> -->
 												<td><a href="<?php echo $tenders['id'];?>"  data-id="<?php echo $tenders['id'];?>"  data-target="#model4" data-toggle="modal" class="tblEditBtn">
@@ -206,6 +211,16 @@
 													class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
 													<input type="hidden"  id="aboutID" name="aboutID" class="mdl-textfield__input" >
 													
+												</div>
+											</div>
+											<div class="col-lg-12 p-t-20">
+												<label class="control-label col-md-3">Upload Pdf
+												</label>
+												<div class="col-md-12">
+													<div>
+														<input type="file" name="pdf_file" id="pdf_file" accept=".pdf" class="dropzone">
+														 
+													</div>
 												</div>
 											</div>
 
@@ -347,7 +362,7 @@ function readURL(input) {
   }
 }
 
-$("#aboutImage").change(function() {
+$("#pdf_file").change(function() {
   readURL(this);
 });
 

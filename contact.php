@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <?php include("include/header.php");?>
     <body class="demo-5">
         <!--WRAPPER START--> 
@@ -20,35 +24,54 @@
 			<!-- SAB BANNER END-->
 			
 			<!-- CITY EVENT2 WRAP START-->
+			
 			<div class="city_event2_wrap">
 				<div class="container">
 					
 					<div class="city_event_detail question overlay">
 						<h3>DID’T FIND YET? ASK YOUR QUESTION</h3>
+						
+                        <?php 
+	                    if (isset($_SESSION['successMessage'])) {
+	                        echo "<p class='success'><font size='4pt'>".$_SESSION['successMessage']."<br>";
+	                        unset($_SESSION["successMessage"])  ;
+	                         } 
+	                    if (isset($_SESSION['errorMessage'])) {
+                        	echo "<p class='error'><font color=red size='4pt'>".$_SESSION['errorMessage'];
+                        	unset($_SESSION['errorMessage'])  ;
+                        
+                    		}
+	                     ?>
+	                    </p>
+						
+
 						<div class="event_booking_form">
+							<form action="email.php" method="POST">
 							<div class="row">
 								<div class="col-md-6 col-sm-6">
 									<div class="event_booking_field">
-										<input type="text" placeholder="Name">
+										<input type="text" name="name" placeholder="Name">
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-6">
 									<div class="event_booking_field">
-										<input type="text" placeholder="Email">
+										<input type="email" name="email" placeholder="Email">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="event_booking_field">
-										<input type="text" placeholder="Phone">
+										<input type="text" name="subject" placeholder="subject">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="event_booking_area">
-										<textarea>Comments</textarea>
-										<a class="theam_btn btn2" href="#">Submit</a>
+										<textarea name="message" placeholder="message"></textarea>
+										<button class="theam_btn btn2" name="submit" >Submit</button>
+										
 									</div>
 								</div>
 							</div>
+							</form>
 						</div>
 					</div>
 					
@@ -61,6 +84,25 @@
 			</footer>
 		</div>
 		 <!--WRAPPER END-->
+		 <style type="text/css">
+			.success{
+				text-align: center;
+				color: #70df3d;;
+				font-weight: 600;
+				position: relative;
+				z-index: 2;
+				margin-bottom: 33px;
+					}
+			.error{
+				text-align: center;
+				color: #d50a0a;
+				font-weight: 600;
+				position: relative;
+				z-index: 2;
+				margin-bottom: 33px;
+					}
+	
+		</style>
         <!--Jquery Library-->
         <script src="js/jquery.js"></script>
     	<!--Bootstrap core JavaScript-->

@@ -9,7 +9,7 @@ $readEnquiry = $crud->Read("newsticker","`id`='$dataId'");
 
 if ($readEnquiry) {
 
-	$data['image']= $readEnquiry[0]['image'];
+	$data['image']= $readEnquiry[0]['pdf'];
 	$data['news']= $readEnquiry[0]['news'];
 	$data['date_uploaded']= $readEnquiry[0]['date_uploaded'];
 

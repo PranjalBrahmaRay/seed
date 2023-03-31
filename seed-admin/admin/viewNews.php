@@ -118,7 +118,7 @@
 				                        <thead class="gradient">
 				                            <tr>
 				                                <th>ID</th>
-				                                <th>Image</th>
+				                                <th>view pdf</th>
 				                                <th>News</th>
 				                                <th>uploaded date</th>
 				                                <th>Action</th>
@@ -128,8 +128,8 @@
 						                    
 										<tfoot>
 											<tr>
-												                <th>ID</th>
-				                                <th>Image</th>
+												<th>ID</th>
+				                                <th>view pdf</th>
 				                                <th>News</th>
 				                                <th>uploaded date</th>
 				                                <th>Action</th>
@@ -143,7 +143,7 @@
                                         	<tr>
 	                                        	<td><?php echo ++$n; ?></td>	
 	                                        	
-	                                        	<td><img width="100px" src="<?php echo $news['image'];?>"></td>
+	                                        	<td><a href="<?php echo $news['pdf'] ;?>"><i class="fa fa-file-pdf-o" style="color:red;font-size: 10px"> view</i></a></td>
 	                                        	<td><?php echo $news['news'] ;?></td>	
 	                                        		
 	                                        	<td><?php echo $news['date_uploaded'];?></td>	
@@ -204,15 +204,16 @@
 											</div>
 										
 											<div class="col-lg-12 p-t-20">
-												<label class="control-label col-md-3">Upload Photo
+												<label class="control-label col-md-3">Upload Pdf
 												</label>
 												<div class="col-md-12">
 													<div>
-														<input type="file" name="aboutImage" id="aboutImage" accept="image/*" class="dropzone">
-														 <img id="responseImage" width="100px" height="100px">
+														<input type="file" name="pdf_file" id="pdf_file" accept=".pdf" class="dropzone">
+														 
 													</div>
 												</div>
 											</div>
+
 												
 											
 											
@@ -341,7 +342,7 @@ function readURL(input) {
   }
 }
 
-$("#aboutImage").change(function() {
+$("#pdf_file").change(function() {
   readURL(this);
 });
 

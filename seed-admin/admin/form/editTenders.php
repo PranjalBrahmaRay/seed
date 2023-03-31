@@ -20,7 +20,7 @@ if (empty($_SESSION['this_user_id'])) {
 if(isset($_POST['formSubmit'])){
     extract($_POST);
 
-    if (empty($_FILES["aboutImage"]["name"])) {
+    if (empty($_FILES["pdf_file"]["name"])) {
         $data = [
           
             
@@ -39,13 +39,13 @@ if(isset($_POST['formSubmit'])){
             echo '<script>window.location.assign("../viewTenders.php");</script>';
         }
     } else {
-        $target_dir = "images/index/";
-        $target_file = $target_dir . md5(time()).basename($_FILES["aboutImage"]["name"]);
+        $target_dir = "images/pdf/";
+        $target_file = $target_dir . md5(time()).basename($_FILES["pdf_file"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         
-        $check = getimagesize($_FILES["aboutImage"]["tmp_name"]);
+        $check = filesize($_FILES["pdf_file"]["tmp_name"]);
         if($check !== false) {
             $uploadOk = 1;
         } else{
@@ -63,13 +63,14 @@ if(isset($_POST['formSubmit'])){
         // if everything is ok, try to upload file
         } else {
 
-            if (move_uploaded_file($_FILES["aboutImage"]["tmp_name"], "../".$target_file)) {
+            if (move_uploaded_file($_FILES["pdf_file"]["tmp_name"], "../".$target_file)) {
 
-                // $_SESSION['message']= "The file ". basename( $_FILES["aboutImage"]["name"]). " has been uploaded.";
+                // $_SESSION['message']= "The file ". basename( $_FILES["pdf_file"]["name"]). " has been uploaded.";
                 $data = [
-                    // 'image' => $target_file,
-                    'news' =>$news,
-                    'date_uploaded' =>$today,
+                    'image' => $target_file,
+                    'tenderno' =>$tenderno,
+                     'title' =>$title,
+                     'date_uploaded' =>$today,
                     
                     
                 ];

@@ -33,10 +33,11 @@
    
 			      
 						<div class="col-md-6 col-sm-6 col-xl-6">
-							<iframe src="include/newsticker.php" class="iframe2" width="400" height="387" style="border-radius: 10px"></iframe>
+							<iframe src="include/newsticker.php" class="iframe2" width="400" height="280" style="border-radius: 10px"></iframe>
 						</div>
 					</div>
 				</div>
+			</div>
 				
 
 <script src="slider/js/slider1.js"></script>

@@ -118,9 +118,8 @@
 				                        <thead class="gradient">
 				                            <tr>
 				                                <th>ID</th>
-				                               
+				                                <th>Pdf</th>
 				                                <th>Head</th>
-				                               
 				                                <th>Description</th>
 				                                <th>uploaded date</th>
 				                                <th>Action</th>
@@ -130,11 +129,10 @@
 						                    
 										<tfoot>
 											<tr>
-												                <th>ID</th>
-				                               
-				                                <th>Head</th>
-				                             
-				                                <th>Description</th>
+								                <th>ID</th>
+								                <th>Pdf</th>
+								                <th>Head</th>
+								                <th>Description</th>
 				                                <th>uploaded date</th>
 				                                <th>Action</th>
 											</tr>
@@ -148,6 +146,7 @@
 	                                        	
 	                                        	
 	                                        	<td><?php echo $announce['id'] ;?></td>
+	                                        	<td><a href="<?php echo $announce['image'] ;?>"><i class="fa fa-file-pdf-o" style="color:red;font-size: 10px"> view</i></a></td>
 	                                        	<td><?php echo $announce['head'] ;?></td>	
 	                                        		
 	                                        	<td><?php echo $announce['description'] ;?></td>	
@@ -205,6 +204,16 @@
 													class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
 													<input type="hidden"  id="aboutID" name="aboutID" class="mdl-textfield__input" >
 													
+												</div>
+											</div>
+											<div class="col-lg-12 p-t-20">
+												<label class="control-label col-md-3">Upload Pdf
+												</label>
+												<div class="col-md-12">
+													<div>
+														<input type="file" name="pdf_file" id="pdf_file" accept=".pdf" class="dropzone">
+														 
+													</div>
 												</div>
 											</div>
 										
@@ -345,7 +354,7 @@ function readURL(input) {
   }
 }
 
-$("#aboutImage").change(function() {
+$("#pdf_file").change(function() {
   readURL(this);
 });
 

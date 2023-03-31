@@ -24,8 +24,7 @@
 								 <div class="widget_service">
 									<ul>
 										<li><a href="itilink.php">ITI</a></li>
-										<li><a href="#">logo competition</a></li>
-										<li><a href="link/emp/index.php" target="_blank">Employment</a></li>
+										<li><a href="comingSoon.php" target="_self">Employment</a></li>
 										<li><a href="event.php">News</a></li>
 									
 									</ul>
@@ -39,7 +38,7 @@
 								 <div class="widget_service">
 									<ul>
 										<li><a href="#">Online admission</a></li>
-										<li><a href="link/emp/index.php" target="_blank">Employment card Register/Renew</a></li>
+										<li><a href="../comingSoon.php" target="_blank">Employment card Register/Renew</a></li>
 										
 									</ul>
 								 </div>
@@ -60,7 +59,7 @@
 				<div class="widget_copyright">
 								<div class="col-md-6 col-sm-6">
 									<div class="widget_logo">
-										<a href="#"><img style="max-width: 260px;" src="images/seed4.png"" alt=""></a>
+										<a href="#"><img style="max-width: 260px;" src="images/seed4.png" alt=""></a>
 									</div>
 								</div>
 								<div class="col-md-6">

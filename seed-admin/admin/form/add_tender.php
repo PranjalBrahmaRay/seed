@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 
     extract($_POST);
 
-    if (empty($_FILES["aboutImage"]["name"])) {
+    if (empty($_FILES["pdf_file"]["name"])) {
 
         
         $data = [
@@ -47,20 +47,20 @@ if(isset($_POST['submit'])){
         }
 
     } else {
-        $target_dir = "images/index/";
-        $target_file = $target_dir . md5(time()).basename($_FILES["aboutImage"]["name"]);
+        $target_dir = "images/pdf/";
+        $target_file = $target_dir . md5(time()).basename($_FILES["pdf_file"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         
-        $check = getimagesize($_FILES["aboutImage"]["tmp_name"]);
+        $check = filesize($_FILES["pdf_file"]["tmp_name"]);
         if($check !== false) {
             $uploadOk = 1;
         } else{
             $uploadOk = 0;
         } 
             // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+        if($imageFileType != "pdf") {
          
             $uploadOk = 0;
         }
@@ -72,11 +72,11 @@ if(isset($_POST['submit'])){
         // if everything is ok, try to upload file
         } else {
 
-            if (move_uploaded_file($_FILES["aboutImage"]["tmp_name"], "../".$target_file)) {
+            if (move_uploaded_file($_FILES["pdf_file"]["tmp_name"], "../".$target_file)) {
 
               // $_SESSION['message']= "The file ". basename( $_FILES["aboutImage"]["name"]). " has been uploaded.";
                 $data = [
-                    
+                     'image' =>$target_file,
                      'tenderno' =>$tenderno,
                      'title' =>$title,
                      'date_uploaded' =>$today,

@@ -20,7 +20,7 @@ if (empty($_SESSION['this_user_id'])) {
 if(isset($_POST['formSubmit'])){
     extract($_POST);
 
-    if (empty($_FILES["aboutImage"]["name"])) {
+    if (empty($_FILES["pdf_file"]["name"])) {
         $data = [
           
             'head' =>$head,
@@ -40,20 +40,20 @@ if(isset($_POST['formSubmit'])){
             echo '<script>window.location.assign("../view_announcement.php");</script>';
         }
     } else {
-        $target_dir = "images/index/";
-        $target_file = $target_dir . md5(time()).basename($_FILES["aboutImage"]["name"]);
+        $target_dir = "images/pdf/";
+        $target_file = $target_dir . md5(time()).basename($_FILES["pdf_file"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         
-        $check = getimagesize($_FILES["aboutImage"]["tmp_name"]);
+        $check = filesize($_FILES["pdf_file"]["tmp_name"]);
         if($check !== false) {
             $uploadOk = 1;
         } else{
             $uploadOk = 0;
         } 
             // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+        if($imageFileType != "pdf" ) {
          
             $uploadOk = 0;
         }
@@ -61,16 +61,16 @@ if(isset($_POST['formSubmit'])){
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
           $_SESSION['message']= '<script>alert("Sorry, your file was not uploaded.");</script>';
+
         // if everything is ok, try to upload file
         } else {
 
-            if (move_uploaded_file($_FILES["aboutImage"]["tmp_name"], "../".$target_file)) {
+            if (move_uploaded_file($_FILES["pdf_file"]["tmp_name"], "../".$target_file)) {
 
                 // $_SESSION['message']= "The file ". basename( $_FILES["aboutImage"]["name"]). " has been uploaded.";
                 $data = [
-                    
+                    'image' => $target_file,
                     'head' =>$head,
-                   
                     'description' =>$description,
                     'date_uploaded' =>$today,
                     

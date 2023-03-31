@@ -326,7 +326,7 @@
       $.ajax({
          type: "POST", 
          dataType: "json", 
-         url: "xhr/fetch_events.php", 
+         url: "xhr/fetch_schemes.php", 
          data: {
             dataId:dataId         
          },
